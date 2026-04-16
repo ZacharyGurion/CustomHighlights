@@ -3,6 +3,10 @@
     <name>CustomHighlights</name>
     <vendor>zacharygurion</vendor>
 
+    <description><![CDATA[
+    A simple plugin that adds more precise syntax highlighting settings.
+  ]]></description>
+
     <depends>com.intellij.modules.platform</depends>
 
     <depends optional="true" config-file="customhighlights-kotlin.xml">org.jetbrains.kotlin</depends>
