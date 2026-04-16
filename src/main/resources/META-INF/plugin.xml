@@ -1,0 +1,55 @@
+<idea-plugin>
+    <id>com.github.zacharygurion.customhighlights.CustomHighlights</id>
+    <name>CustomHighlights</name>
+    <vendor>zacharygurion</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <depends optional="true" config-file="customhighlights-kotlin.xml">org.jetbrains.kotlin</depends>
+
+
+    <extensions defaultExtensionNs="org.jetbrains.kotlin">
+        <supportsKotlinPluginMode supportsK2="true"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Color scheme settings page: Settings > Editor > Color Scheme > Custom Highlights -->
+        <colorSettingsPage
+                implementation="com.github.zacharygurion.customhighlights.CustomHighlightsColorSettingsPage"/>
+
+        <!-- All annotators below use only LeafPsiElement (platform class) and have no
+             language-plugin imports. IntelliJ silently ignores a language= value that
+             doesn't exist in the current IDE (e.g. no PHP in IDEA Community). -->
+
+        <annotator language="JAVA"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.JavaKeywordAnnotator"/>
+        <annotator language="Python"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.PythonKeywordAnnotator"/>
+        <annotator language="JavaScript"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.JsKeywordAnnotator"/>
+        <annotator language="TypeScript"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.TsKeywordAnnotator"/>
+        <annotator language="go"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.GoKeywordAnnotator"/>
+        <annotator language="Rust"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.RustKeywordAnnotator"/>
+        <annotator language="C"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.CKeywordAnnotator"/>
+        <annotator language="C++"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.CppKeywordAnnotator"/>
+        <annotator language="C#"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.CSharpKeywordAnnotator"/>
+        <annotator language="Groovy"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.GroovyKeywordAnnotator"/>
+        <annotator language="Scala"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.ScalaKeywordAnnotator"/>
+        <annotator language="PHP"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.PhpKeywordAnnotator"/>
+        <annotator language="Dart"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.DartKeywordAnnotator"/>
+        <annotator language="SQL"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.SqlKeywordAnnotator"/>
+        <annotator language="ruby"
+                   implementationClass="com.github.zacharygurion.customhighlights.Annotators.RubyKeywordAnnotator"/>
+    </extensions>
+</idea-plugin>
