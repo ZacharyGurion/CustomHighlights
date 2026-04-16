@@ -1,10 +1,10 @@
 # Custom Highlights
 
-An IntelliJ IDEA plugin that lets you assign distinct colors to three keyword categories — **control flow**, **type/declaration**, and **access/visibility** — across a wide range of languages.
+An IntelliJ plugin that lets you assign distinct colors to three keyword categories - **control flow**, **type/declaration**, and **access/visibility** - across a wide range of languages.
 
 ## Features
 
-Color each keyword category independently via **Settings > Editor > Color Scheme > Keyword Highlights**:
+Color each keyword category independently via **Settings > Editor > Color Scheme > Custom Highlights**:
 
 | Category | Examples |
 |---|---|
@@ -16,18 +16,14 @@ Color each keyword category independently via **Settings > Editor > Color Scheme
 
 Java, Kotlin, Python, JavaScript, TypeScript, Go, Rust, C, C++, C#, Groovy, Scala, PHP, Dart, SQL
 
-Language support is opt-in at runtime — annotators for languages whose plugins are not installed are silently skipped.
-
-## Installation
-
-Install from the [JetBrains Marketplace](https://plugins.jetbrains.com) by searching for **Custom Highlights**, or go to **Settings > Plugins > Marketplace**.
+Language support is opt-in at runtime - annotators for languages whose plugins are not installed are silently skipped.
 
 ## Configuration
 
-1. Open **Settings > Editor > Color Scheme > Keyword Highlights**
+1. Open **Settings > Editor > Color Scheme > Custom Highlights**
 2. Select a keyword category
 3. Set your desired foreground color and font style
-4. Click **OK** — highlighting applies immediately across all open files
+4. Click **OK** - highlighting applies immediately across all open files
 
 ## Building from source
 
